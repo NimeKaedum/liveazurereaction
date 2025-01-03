@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Catálogo de Regalos</title>
+    <link rel="stylesheet" href="Estilos/Cat_Admin_Modi.css" />
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <div id="EncabezadoId"></div>
+    <script src="scripts/Encabezado.js"></script>
+    <main id="product-container" class="product-container">
+    <header>
+      <h1>Gestión de Catálogo de Regalos para Eventos</h1>
+    </header>
+
+    <div class="Container_form">
+        <!-- Formulario -->
+        <section class="form-section">
+        <h2>Formulario de Administración</h2>
+        <form id="catalog-form">
+            <div class="form-group">
+            <label for="product-name">Nombre del producto:</label>
+            <input
+                type="text"
+                id="product-name"
+                placeholder="Escribe el nombre del producto"
+                required
+            />
+            </div>
+            <div class="form-group">
+            <label for="product-description">Descripción:</label>
+            <textarea
+                id="product-description"
+                placeholder="Escribe una breve descripción"
+                required
+            ></textarea>
+            </div>
+            <div class="form-group">
+            <label for="product-price">Precio:</label>
+            <input
+                type="number"
+                id="product-price"
+                placeholder="Ej. 199.99"
+                step="0.01"
+                required
+            />
+            </div>
+            <div class="form-group">
+            <label for="product-category">Categoría:</label>
+            <select id="product-category" required>
+                <option value="">Selecciona una categoría</option>
+                <option value="Boda">Boda</option>
+                <option value="XV_Años">XV Años</option>
+                <option value="Bautizos">Bautizos</option>
+                <option value="Infantiles">Infantiles</option>
+                <option value="Para_el">Para él</option>
+                <option value="Para_ella">Para ella</option>
+            </select>
+            </div>
+            <div class="form-group">
+            <label for="product-image">Imagen del producto (URL):</label>
+            <input
+                type="url"
+                id="product-image"
+                placeholder="https://example.com/imagen.jpg"
+                required
+            />
+            </div>
+            <div class="form-actions">
+            <button type="submit">Agregar/Modificar</button>
+            <button type="button" id="delete-btn">Eliminar</button>
+            </div>
+        </form>
+        </section>
+    </div>
+
+    <section class="catalog-section">
+      <h2>Catálogo de Productos</h2>
+      <div class="search-bar">
+        <input type="text" id="search-bar" placeholder="Buscar producto..." />
+      </div>
+      <div id="product-catalog">
+        <!-- Aquí se mostrarán los productos -->
+      </div>
+    </section>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
