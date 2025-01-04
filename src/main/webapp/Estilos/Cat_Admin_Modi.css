@@ -84,6 +84,12 @@ form button:hover {
   background-color: #0056b3;
 }
 
+form button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
 form input,
 form textarea,
 form select {
@@ -103,6 +109,9 @@ form {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten a una nueva fila */
+  gap: 20px; /* Espaciado entre tarjetas */
 }
 
 .catalog h2 {
@@ -162,4 +171,12 @@ form {
 
 .catalog-table tr:hover {
   background-color: #f1f1f1;
+}
+
+.product-catalog{
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten a una nueva fila */
+  gap: 20px; /* Espaciado entre tarjetas */
+  justify-content: left; /* Centra las tarjetas horizontalmente */
+  padding: 20px;
 }

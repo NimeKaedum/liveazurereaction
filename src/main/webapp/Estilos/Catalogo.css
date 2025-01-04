@@ -8,11 +8,12 @@ body {
 }
 
 header {
-  background-color: #007bff;
+  /*background-color: #007bff;*/
   color: white;
   padding: 10px 20px;
   text-align: center;
   font-size: 1.5em;
+  width: 100%;
 }
 
 .product-container {
@@ -20,6 +21,14 @@ header {
   flex-wrap: wrap; /* Permite que las tarjetas se ajusten a una nueva fila */
   gap: 20px; /* Espaciado entre tarjetas */
   justify-content: center; /* Centra las tarjetas horizontalmente */
+  padding: 20px;
+}
+
+.product-container2 {
+/*  display: flex;
+  flex-wrap: wrap; !* Permite que las tarjetas se ajusten a una nueva fila *!*/
+  gap: 20px; /* Espaciado entre tarjetas */
+  justify-content: left; /* Centra las tarjetas horizontalmente */
   padding: 20px;
 }
 

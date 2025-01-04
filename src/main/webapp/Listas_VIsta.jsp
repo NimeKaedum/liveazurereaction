@@ -36,6 +36,7 @@
 
         <%
                 }
+                bd.cierraConexion();
 
             } catch (Exception ex) {
                 System.out.println(ex.getMessage());
