@@ -50,3 +50,8 @@ main {
 .btn:hover {
   background-color: #34a5ff;
 }
+.btn:disabled{
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
