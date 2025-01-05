@@ -4,12 +4,14 @@ body {
   background-color: #cde9fe;
   color: #333;
 }
+
 main {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
 }
+
 .container {
   background-color: #ffffff;
   padding: 20px;
@@ -18,11 +20,13 @@ main {
   text-align: center;
   width: 300px;
 }
+
 .container h1 {
   font-size: 1.8em;
   margin-bottom: 20px;
   color: #128ff3;
 }
+
 .inSect {
   display: block;
   width: 97%;
@@ -35,6 +39,7 @@ main {
   font-size: medium;
   text-align: start;
 }
+
 .btn {
   display: block;
   width: 100%;
@@ -47,9 +52,11 @@ main {
   font-size: 1em;
   cursor: pointer;
 }
+
 .btn:hover {
   background-color: #34a5ff;
 }
+
 .btn:disabled {
   background-color: #ccc;
   color: #666;
@@ -63,13 +70,16 @@ input[type="radio"] {
   width: 18px;
   height: 18px;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 label {
-  font-size: 1em;
+  font-size: 0.94em;
   color: #333;
   margin-right: 10px;
   cursor: pointer;
+  vertical-align: left;
+  display: inline-block;
 }
 
 input[type="radio"]:hover {
@@ -81,9 +91,13 @@ input[type="radio"]:checked {
   accent-color: #128ff3;
 }
 
-/* Espaciado entre el texto explicativo */
-form p {
-  margin: 5px 0 15px;
-  font-size: 0.9em;
-  color: #555;
+/* Estilos para alinear el texto con el radio input */
+.radio-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 10px;
 }
