@@ -1,5 +1,5 @@
 // Script para ingresar el Encabezado dinámicamente
-fetch("Encabezado.jsp")
+fetch("Encabezado.html")
   .then((Response) => {
     if (!Response.ok) {
       throw new Error("No se pudo cargar el Encabezado.");
