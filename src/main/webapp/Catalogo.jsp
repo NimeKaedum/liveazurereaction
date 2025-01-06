@@ -23,7 +23,7 @@
 
         try {
           bd.conectar();
-          String strQry = "select imagen, nombre, categoria, descripcion, precio, hay, id_regalo from producto;";
+          String strQry = "select imagen, nombre, categoria, descripcion, precio, existencias, id_regalo from producto;";
 
           ResultSet rs = null;
 
@@ -36,7 +36,7 @@
       %>
 
       <div class="product-card">
-        <img src="imagenes/base/<%=rs.getString(1)%>" alt="Producto 1" class="product-image">
+        <img src="<%=rs.getString(1)%>" alt="Producto 1" class="product-image">
         <h2 class="product-name"><%=rs.getString(2)%></h2>
         <p class="product-category"><strong>Categoría:</strong> <%=rs.getString(3)%></p>
         <p class="product-description"><%=rs.getString(4)%></p>
@@ -50,6 +50,7 @@
 
       <%
           }
+          bd.cierraConexion();
 
         } catch (Exception ex) {
           System.out.println(ex.getMessage());

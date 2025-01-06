@@ -5,7 +5,7 @@
     aber
 </a>
 
-<a href="menu.jsp">
+<a href="Inicio_sesion.jsp">
     inicio
 </a>
 </body>
