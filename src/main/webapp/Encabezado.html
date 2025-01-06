@@ -16,8 +16,7 @@
           <ul>
             <li><a href="menu.jsp">Inicio</a></li>
             <li><a href="Catalogo.jsp">Catálogo</a></li>
-            <li><a href="#">Asistencia</a></li>
-            <li><a href="Menu_inicios_Sec.html">Iniciar sesión</a></li>
+            <li><a href="Inicio_sesion.jsp">Iniciar sesión</a></li>
           </ul>
         </nav>
       </div>
@@ -26,18 +25,34 @@
     <!-- Menú de administrador -->
     <header id="menuAdmin" class="header" style="display: none">
       <div class="contenedor logo-nav-contenedor">
-        <label><a href="AdminInicio.html" class="logo">Logo Empresa</a></label>
+        <label><a href="menu.jsp" class="logo">Logo Empresa</a></label>
         <nav class="navegacion">
           <ul>
-            <li><a href="AdminInicio.html">Inicio</a></li>
+            <li><a href="menu.jsp">Inicio</a></li>
             <li><a href="Catalogo_Admin_Modif.jsp">Gestión de productos</a></li>
-            <li><a href="Usuarios.html">Usuarios</a></li>
-            <li><a href="Reportes.html">Reportes</a></li>
+            <li><a href="Listas_Admin.html">Gestion de listas</a></li>
             <li><a href="Cerrar_sesion.jsp">Cerrar sesión</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <script src="Scripts/MenuDinamico.js"></script>
+
+    <!-- Menú de anfitrion -->
+    <header id="menuAnfi" class="header" style="display: none">
+      <div class="contenedor logo-nav-contenedor">
+        <label><a href="menu.jsp" class="logo">Logo Empresa</a></label>
+        <nav class="navegacion">
+          <ul>
+            <li><a href="menu.jsp">Inicio</a></li>
+            <li><a href="Catalogo.jsp">Catálogo</a></li>
+            <li><a href="Estavaparalocalstorage.jsp">Mi lista</a></li>
+            <li><a href="Cerrar_sesion.jsp">Cerrar sesión</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+<!--    <script src="Scripts/MenuDinamico.js"></script>-->
+
   </body>
 </html>

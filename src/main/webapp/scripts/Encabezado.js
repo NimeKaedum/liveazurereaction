@@ -1,5 +1,5 @@
 // Script para ingresar el Encabezado dinámicamente
-fetch("Encabezado.html")
+fetch("Encabezado.jsp")
   .then((Response) => {
     if (!Response.ok) {
       throw new Error("No se pudo cargar el Encabezado.");
@@ -24,13 +24,21 @@ function mostrarMenuPorRol() {
   // Seleccionar los elementos del menú
   const menuUsuario = document.querySelector("#menuUsuario");
   const menuAdmin = document.querySelector("#menuAdmin");
+  const menuAnfi = document.querySelector("#menuAnfi");
 
   // Mostrar el menú correspondiente al rol
+
+  menuUsuario.style.display = "flex";
+
   if (rolUsuario === "admin") {
-    if (menuAdmin) menuAdmin.style.display = "flex";
-    if (menuUsuario) menuUsuario.style.display = "none";
-  } else {
-    if (menuUsuario) menuUsuario.style.display = "flex";
-    if (menuAdmin) menuAdmin.style.display = "none";
+    // if (menuAdmin) menuAdmin.style.display = "flex";
+    // if (menuUsuario) menuUsuario.style.display = "none";
+    menuAdmin.style.display = "flex";
+    menuUsuario.style.display = "none";
+  } else if (rolUsuario === "anfitrion" || rolUsuario === "invitado") {
+    // if (menuUsuario) menuUsuario.style.display = "flex";
+    // if (menuAdmin) menuAdmin.style.display = "none";
+    menuAnfi.style.display = "flex";
+    menuUsuario.style.display = "none";
   }
 }
