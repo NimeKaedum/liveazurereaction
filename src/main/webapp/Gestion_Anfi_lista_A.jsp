@@ -151,8 +151,11 @@
 
         <script>
 
-          if ('<%=busqueda%>' !== "")
+          if ("<%=busqueda%>" !== "")
             document.getElementById('nombre').value = '<%=busqueda%>';
+
+          if ("<%=cat%>" !== "")
+            document.getElementById('categoria').value = '<%=cat%>';
 
           // Agregar evento a cada botón
           document.querySelectorAll('button[id^="button"]').forEach(button => {

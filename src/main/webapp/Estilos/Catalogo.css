@@ -144,3 +144,7 @@ header {
   justify-content: center; /* Centra las tarjetas horizontalmente */
   padding: 20px;
 }
+
+.fullfe{
+  width: 100%;
+}

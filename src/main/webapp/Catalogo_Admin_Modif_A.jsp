@@ -81,9 +81,9 @@
             <select id="product-category" name="categoria" required>
                 <option value="">Selecciona una categoría</option>
                 <option value="Boda">Boda</option>
-                <option value="XV_Años">XV Años</option>
-                <option value="Bautizos">Bautizos</option>
-                <option value="Infantiles">Infantiles</option>
+                <option value="XV">XV Años</option>
+                <option value="Bautizo">Bautizos</option>
+                <option value="Infantil">Infantiles</option>
                 <option value="Para_el">Para él</option>
                 <option value="Para_ella">Para ella</option>
             </select>

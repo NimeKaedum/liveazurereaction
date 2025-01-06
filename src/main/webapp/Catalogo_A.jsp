@@ -45,20 +45,36 @@
 
       <%
 
+        String cat = request.getParameter("categoria");
+        String busqueda = request.getParameter("nombre");
+        String strQry2 = null;
+
         Base bd = new Base();
+
+        if (cat == null)
+          cat = "";
+        if (busqueda == null)
+          busqueda = "";
 
         try {
           bd.conectar();
-          String strQry = "select imagen, nombre, categoria, descripcion, precio, existencias, id_regalo from producto;";
+
+          if (Objects.equals(cat, "")){
+            strQry2 = "select imagen, nombre, categoria, descripcion, precio, existencias, id_regalo from producto " +
+                    "where nombre like '%"+busqueda+"%';";
+          }else {
+            strQry2 = "select imagen, nombre, categoria, descripcion, precio, existencias, id_regalo from producto " +
+                    "where categoria = '"+cat+"' and nombre like '%"+busqueda+"%';";
+          }
 
           ResultSet rs = null;
 
-          rs = bd.consulta(strQry);
+          rs = bd.consulta(strQry2);
 
           int ex;
           while (rs.next()) {
 
-            ex = Integer.parseInt(rs.getString(6));
+              ex = Integer.parseInt(rs.getString(6));
       %>
 
       <div class="product-card">
@@ -84,6 +100,13 @@
         }
       %>
 
+      <script>
+        if ("<%=busqueda%>" !== "")
+          document.getElementById('nombre').value = '<%=busqueda%>';
+
+        if ("<%=cat%>" !== "")
+          document.getElementById('categoria').value = '<%=cat%>';
+      </script>
     </main>
     <!--<script src="scripts/Catalogo.js"></script>-->
     <!-- Pie de página -->
