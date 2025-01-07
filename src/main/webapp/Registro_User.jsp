@@ -113,7 +113,7 @@ contentType="text/html;charset=UTF-8" language="java" %>
         </script>
 
         <div class="registro">
-          <a href="sesion_User.html">¿Ya posees una cuenta?</a>
+          <a href="Inicio_sesion.jsp">¿Ya posees una cuenta?</a>
         </div>
       </div>
     </main>
