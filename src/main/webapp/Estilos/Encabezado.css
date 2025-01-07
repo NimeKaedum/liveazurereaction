@@ -31,10 +31,15 @@
 }
 .navegacion ul li {
   display: inline-block;
+  margin: 0 0.5rem;
 }
 .navegacion ul li a {
-  display: block;
-  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
   transition: all 0.2s linear;
   border-radius: 15px;
   color: #ffffff;
@@ -45,7 +50,13 @@
 }
 
 /*logo*/
-.logo {
-  font-size: 2rem;
-  line-height: 1.1em;
+.capi {
+  height: 90px;
+  margin-right: 1rem;
+}
+
+.logo-nav-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
