@@ -100,13 +100,6 @@ header {
   background-color: #28a745;
   border: none;
   border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.add-to-cart-btn:hover {
-  background-color: #218838;
-  transform: scale(1.1);
 }
 
 .add-to-cart-btn:disabled {
