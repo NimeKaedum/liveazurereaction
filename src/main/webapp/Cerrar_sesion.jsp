@@ -14,8 +14,7 @@
 
     <script>
         localStorage.removeItem("rol");
-        localStorage.removeItem("id");
-        window.location.href = "menu.jsp";
+        window.location.href = "Inicio_sesion.jsp";
     </script>
 
 

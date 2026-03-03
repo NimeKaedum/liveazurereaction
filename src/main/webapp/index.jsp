@@ -8,11 +8,5 @@
 <a href="Inicio_sesion.jsp">
     inicio
 </a>
-
-<%
-    response.sendRedirect("menu.jsp");
-%>
-
-
 </body>
 </html>

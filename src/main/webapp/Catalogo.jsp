@@ -15,32 +15,6 @@
     <div id="EncabezadoId"></div>
     <script src="scripts/Encabezado.js"></script>
     <main id="product-container" class="product-container">
-      <div class="fullfe">
-        <h2>Buscar Regalos</h2>
-        <form id="form-buscar" method="post" action="Catalogo_A.jsp">
-          <label for="categoria">Categoría:</label>
-          <select id="categoria" name="categoria">
-            <option value="">-- Seleccionar --</option>
-            <option value="boda">Boda</option>
-            <option value="xv">XV Años</option>
-            <option value="bautizo">Bautizo</option>
-            <option value="infantil">Infantil</option>
-            <option value="para_el">Para Él</option>
-            <option value="para_ella">Para Ella</option>
-          </select>
-
-          <label for="nombre">Nombre del regalo:</label>
-          <input
-                  type="text"
-                  id="nombre"
-                  name="nombre"
-                  placeholder="Buscar por nombre"
-          />
-
-          <button type="submit">Buscar</button>
-        </form>
-      </div>
-
       <!-- Los productos se agregarán dinámicamente aquí -->
 
       <%
@@ -68,7 +42,7 @@
         <p class="product-description"><%=rs.getString(4)%></p>
         <p class="product-price"><strong>Precio:</strong> $<%=rs.getString(5)%></p>
         <%if (ex >= 1) { %>
-        <button class="add-to-cart-btn" data-id="<%=rs.getString(7)%>">Disponible</button>
+        <button class="add-to-cart-btn" data-id="<%=rs.getString(7)%>">Agregar al carrito</button>
         <%} else {%>
         <button class="add-to-cart-btn" data-id="<%=rs.getString(7)%>" disabled>No disponible</button>
         <%}%>
